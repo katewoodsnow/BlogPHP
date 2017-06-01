@@ -1,0 +1,221 @@
+
+/* TOP NAVBAR */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand>img {
+    padding: 7px 14px;
+}
+
+.navbar {
+    background-color: #e6e6ff;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    font-family: 'Rebellion';
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: #F38D69;
+}
+
+.nav.navbar-nav.navbar-left{
+    color: #F38D69;
+}
+/* END TOP NAVBAR */
+
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #e6e6ff;
+    color: #D2380A;
+    font-family: 'Rebellion';
+    font-size: 15px;
+    text-shadow: 2px 2px 4px #FFFFFF;
+    height: 30px;       /* sets max height.if change must edit body margin-bottom */
+}
+/* END FOOTER */
+
+
+/* CONTAINERS */
+
+
+
+.sidenav {              /* side navbar sppecific */
+    padding-top: 25px;
+    min-height: 100%;
+    font-family: 'Rebellion';
+    font-size: 13px;
+    height: 100vh;
+    height: auto;
+}
+
+.row.content {          /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    height: 100vh;
+    height:auto;
+}
+
+.main_container {
+    height: 100vh;
+    overflow-y: scroll; /*enables scrollbar to left of main container. to remove set to hidden */ 
+    -ms-overflow-style: none;
+}
+
+.main_container::-webkit-scrollbar {
+  display: none; 
+}
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    margin-bottom: 30px; /* Margin bottom by footer height */
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 768px){ /* On small screens, set height to 'auto' for sidenav and grid */
+    .sidenav {
+        height: auto;
+        padding: 0px;
+}   }
+
+/* END CONTAINERS*/
+
+/* SUB-CONTAINERS (PANELS & FORMS) CSS */
+
+.lcontainer {
+    margin-top:80px;
+}
+
+.lform-container {
+    width:400px;
+    margin:0 auto;
+    background:#FFFFFF;
+    padding: 25px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    border-radius:3px;
+}
+
+.pcontainer {
+    margin-top:25px;
+}
+
+.pform-container {
+    width:600px;
+    margin:0 auto;
+    margin-right: 75px;
+    background: #FFFFFF;
+    padding: 25px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    border-radius:3px;   
+}
+    
+.pedit-container {
+    width:600px;
+    margin:0 auto;
+    margin-right:200px;
+    background:#FFFFFF;
+    padding: 25px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    border-radius:3px;    
+}
+
+label {
+    font-family: 'Rebellion';
+    color: #00a9d1;
+}
+/* LOGIN + SIGNUP + CONTACT SPECIFIC CSS */
+
+/* BUTTONS */
+
+/*previous - next */
+.pager {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-family: 'Rebellion';
+  font-size: 11px;
+  text-align: center;
+}
+.pager > li > a {
+  width: 100px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.pgr-fixed {
+    position: fixed;
+    bottom:0;
+ }
+
+/* blog comment */
+.btn-blog {
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    margin-bottom:5px;
+}
+/* search button */
+.search_btn{
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: #0099ff;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    width: 50px;
+    padding: 0;
+}
+
+/* END BUTTONS */
+
+/* FONTS, COLOURS AND COLOUR EFFECTS*/
+
+
+@font-face {
+    font-family: Rebellion;
+    src: url('BlogPHP/fonts/Rebellion.otf');
+}
+.rebellion {
+    font-family: Rebellion;
+}
+
+.font12{
+    font-size: 12px;
+}
+
+.light_orange {
+    color: #F17F4A;
+}
+
+.dark_orange { 
+    color: #D2380A;
+}
+
+.transparent{    
+    background-color: rgba(245, 245, 245, .5);
+}
+
+/* END FONTS, COLOURS AND COLOUR EFFECTS*/
+
+/* IMAGE RELATED */
+/* not working for now but should do rather than call inline */
+.index_main{
+background: url("imgs/background/Reybackground.jpg") no-repeat center center;
+-webkit-background-size: 100% auto;
+-moz-background-size: 100% auto;
+-o-background-size: 100% auto;
+ background-size: 100% auto;
+}
