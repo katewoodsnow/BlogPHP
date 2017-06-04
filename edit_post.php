@@ -8,6 +8,23 @@
 <title>Admin Edit Post</title>
   
 <?php include('layout/head.php');?>
+
+<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+  <script>
+          tinymce.init({
+              selector: "textarea",
+              plugins: [
+                  "advlist autolink lists link image charmap print preview anchor",
+                  "searchreplace visualblocks code fullscreen",
+                  "insertdatetime media table contextmenu paste"
+              ],
+              toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+          });
+  </script>
+ 
+
+
+
 </head>
 
 <body>
@@ -47,6 +64,29 @@
             <p><label>Content</label><br />
                 <textarea name='content' cols='75' rows='10'><?php echo $row['content'];?></textarea></p> 
         </div> 
+    
+        <div class="form-group">
+           <fieldset>
+                                    <legend>Categories</legend>
+
+
+                                    <?php
+                                    $stmt2 = $DB_con->query('SELECT catID, catTitle FROM blog_cats ORDER BY catTitle');
+                                    $checked = null;
+
+                                    while ($row2 = $stmt2->fetch()) {
+                                        if (isset($_POST['catID'])) {
+                                            if (in_array($row2['catID'], $_POST['catID'])) {
+                                                $checked = "checked='checked'";
+                                            } else {
+                                                $checked = "";
+                                            }
+                                        }
+                                        echo "<input type='checkbox' name='catID[]' value='" . $row2['catID'] . "' $checked> " . $row2['catTitle'] . "<br />";
+                                    }
+                                    ?>
+                                </fieldset>
+                </div> 
            
         <div class="clearfix"></div><hr/>
         

@@ -11,9 +11,10 @@ $stmt = $DB_con->prepare('SELECT id, title, description, content, date FROM post
 $stmt->execute(array(':id' => $_GET['id']));
 $row = $stmt->fetch();
 
+include('functions.php');
 //if no posts to view redirect to index page
 if($row['id'] == ''){
-    header('Location: index.php');
+    redirect(index.php);
     exit;
 }
 ?>

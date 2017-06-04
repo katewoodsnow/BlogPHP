@@ -12,8 +12,9 @@ deletion is passed to the url on the index page
     $stmt = $DB_con->prepare('DELETE FROM posts WHERE id = :id');
     $stmt->execute(array(':id' => $_GET['delpost']));
 
-    header('Location: index.php?action=deleted');
-    exit;
+   echo "<script type='text/javascript'>alert('Post deleted successfully!');
+            window.location.href='index.php?action=updated';
+            </script>";
 }
 ?>
 
@@ -24,9 +25,9 @@ deletion is passed to the url on the index page
     
  <title>Blog Admin Corner</title>
   
-<?php include('layout/head.php');?>
+<?php include('layout/head.php');?> 
 
- <!--Confirms with user delete option and passes id of blog deleted to url in admin_index--->
+ <!--Confirms with user delete option and passes id of blog being deleted to url/server admin_index--->
 <script language="JavaScript" type="text/javascript">
     function delpost(id, title){
         if (confirm("Are you sure you want to delete " + title)) {
@@ -58,7 +59,7 @@ deletion is passed to the url on the index page
         <h3 class = "rebellion" >Edit / Delete Posts</h3>
         <br> <br>
     
-    <table cellspacing="20">
+    <table cellspacing="40">
         <tr>
             <th>Title </th>
             <th>Date </th>

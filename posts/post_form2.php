@@ -18,6 +18,17 @@
     </p></article>
        
     <a class=" rebellion btn-default btn-blog pull-right" href=" ">Comment</a>
+    <div id='disqus_thread'></div>
+        <script type='text/javascript'>
+          
+          var disqus_shortname = 'localhost-blogphp';
+              (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+
     
     <?php if (isset($_SESSION['user_session'])): ?>
         

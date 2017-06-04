@@ -52,10 +52,10 @@ if(isset($_POST['submit'])){
  }
   
     //check for any errors
-if(isset($error)){
-    foreach($error as $error){
-        echo $error.'<br />';
-    }
+include('C:\xampp/htdocs/BlogPHP/functions.php');
+
+if (isset($error) && !empty($error)) {       //print errors
+    print_errors($error);
 }
   
 try {
@@ -85,4 +85,3 @@ try {
 
 </form>
 */
-?>
